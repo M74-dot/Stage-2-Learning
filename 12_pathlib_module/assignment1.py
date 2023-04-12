@@ -15,7 +15,7 @@ print(f"Home Directory: {home}")
 
 # Writing to file
 file = Path.cwd() / "new_file.txt"
-print("Writing to file...")
+print(f"Writing to file: {file.name}")
 file.write_text("Hello World!\n Hi Manisha!\n I love Python!")
 print(file.read_text())
 
@@ -23,5 +23,13 @@ print(file.read_text())
 # removing file
 Path.touch(Path.cwd() / "demo.txt")
 file = Path.cwd() / "demo.txt"
+
+# Getting file extension with .
+print(f"Extension of file: {file.suffix}")
+
+# Getting file extension without .
+print(f"Extension of file: {file.suffix[1:]}")
+
+
 print(f"Deleting file: {file}")
 file.unlink()
