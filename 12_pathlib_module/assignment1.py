@@ -14,10 +14,22 @@ print(f"Home Directory: {home}")
 
 
 # Writing to file
-file = Path.cwd() / "new_file.txt"
-print(f"Writing to file: {file.name}")
-file.write_text("Hello World!\n Hi Manisha!\n I love Python!")
-print(file.read_text())
+def write_to_file():
+    file = Path.cwd() / "new_file.txt"
+    print(f"Writing to file: {file.name}")
+    file.write_text("Hello World!\n Hi Manisha!\n I love Python!")
+
+
+write_to_file()
+
+
+def read_from_file():
+    file = Path.cwd() / "new_file.txt"
+    print(f"Reading from file: {file.name}")
+    print(file.read_text())
+
+
+read_from_file()
 
 
 # removing file
